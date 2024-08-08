@@ -1,0 +1,9 @@
+
+.outer {
+    display: flex;
+}
+.inner {
+    border: 1px black solid;
+    height: 10px;
+    width: 10px;
+}
