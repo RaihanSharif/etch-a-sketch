@@ -18,13 +18,23 @@ add listener for mouseover or mousedown at the container level
 then use the target property to color each of the inner divs 
 */
 
+/*
+this block is to ensure that cells of the etch-a-sketch grid is
+only filled when mouse is down.
+*/
+let isMouseDown = false;
+container.addEventListener("mousedown", () => isMouseDown = true );
+container.addEventListener("mouseup", () => isMouseDown = false);
+
+/*
+paints whichever cell that triggers mouseover
+*/
 container.addEventListener('mouseover', (event) => {
     const target = event.target;
-    // const targetID = `#${target.id}`;
-    // const elem =
-    console.log(target);
-    if (target.className === "inner") {   // hmmm??? TODO: 
+    console.log(`is mouse down: ${isMouseDown}`);
+    if (target.className === "inner" && isMouseDown === true) {   // hmmm??? TODO: 
         target.style.backgroundColor = "black";
     }
 
 });
+
