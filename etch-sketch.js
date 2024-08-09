@@ -10,12 +10,15 @@ function drawGrid(num) {
             let innerDiv = document.createElement("div");
             innerDiv.className = "inner";
             innerDiv.id = j;
+            innerDiv.style.height = (Math.floor(960/num)).toString()+"px";
+            innerDiv.style.width = (Math.floor(960/num)).toString()+"px";
+
             outerDiv.appendChild(innerDiv);
         }
     }
 }
 
-drawGrid(16);
+drawGrid(32);
 
 let isMouseDown = false;
 container.addEventListener("mousedown", () => isMouseDown = true );
