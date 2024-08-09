@@ -1,12 +1,12 @@
 #grid-container {
     border: 5px black solid;
-    max-width: fit-content;
+    /* max-width: fit-content; */
+    width: 960px;
+    height: 960px;
 }
 .outer {
     display: flex;
 }
 .inner {
     border: 1px black solid;
-    height: 20px;
-    width: 20px;
 }
